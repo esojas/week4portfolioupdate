@@ -1,0 +1,255 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.container2 {
+    display: grid;
+    grid-template-rows: repeat(2, 110px);
+    grid-template-columns: repeat(3, 110px);
+    grid-gap: 1em;
+    justify-items: center;
+    margin-top: 80px;
+    
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.image {
+    position: relative;
+}
+img {
+    width: 100%;
+    display: block;
+    margin:auto;
+}
+.content{
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    position: absolute;
+    background:rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+}
+.content:hover{
+    opacity: 1;
+}
+.content h1{
+    font-size: 35px;
+    color: white;
+}
+.textcenter, .middletext{
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+}
+body {
+    background-color: #131316;
+    color: #ffffff;
+
+}
+section {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+/*the min height means it give space
+between*/
+.moveright {
+    position: relative;
+    right: 100px;
+}
+.moveleft {
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+.moveleftlist{
+    position: relative;
+    left:70px;
+}
+.movecenterlist{
+    position: relative;
+    right: 30px;
+}
+
+#container, #center {
+    display: flex;
+}
+
+.resize {
+    width: 30px;
+    height: 30px;
+}
+.hidden {
+    opacity: 0;
+    transition: all 2s;
+}
+.show {
+    opacity: 1;
+}
+.border {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+    justify-content: center;
+    border: 2px solid white;
+    width: 1000px;
+    height: 500px;
+}
+.movelefttext {
+    position: relative;
+    left: 100px;
+}
+.box {
+    border: 1px solid;
+    background-color: red;
+    font-size: 15px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+}
+.box:hover {
+    color: white;
+}
+
+
+
+@media (max-width: 321px){
+    section {
+        max-width: 320px;
+    }
+    .textcenter {
+        position: relative;
+        left: -23px;
+    }
+}
+@media (max-width: 476px){
+    section {
+        max-width: 475px;
+    }
+    .moveleft {
+        position: relative;   
+        display: inline;
+        justify-content: center;
+    }
+    .textcenter {
+        position: relative;
+        display: inline;
+        margin-right:auto;
+        
+    }
+    
+    .border {
+        display: flex;
+        flex-direction: row;
+        gap: 3em;
+        justify-content: center;
+        border: 2px solid white;
+        width: 1000px;
+        height: 500px;
+    }    
+    .image {
+        display: flex;
+        position: relative;
+        top: 160px;
+        left: -100px;
+        
+    }
+    .moveleftlist{
+        position: relative;
+        bottom: -150px;
+        left: -138px;
+    }
+    .movecenterlist{
+        position: relative;
+    }
+    .movelefttext {
+        position: relative;
+        bottom: -150px;
+        left: -110px;
+    }
+    #center {
+        display: flex;
+    }
+    .moveright {
+        position: relative;
+        bottom: 150px;
+        left: 75px;
+    }
+    .movecenterlist{
+        position: relative;
+        right: 42px;
+    }
+    
+}
+
+  
+  
+@media (min-width: 640px) {
+    section {
+        max-width: 640px;
+    }
+}
+
+
+@media (max-width: 769px) {
+    section {
+        max-width: 768px;
+    }
+    .moveleft {
+        position: relative;
+        margin-right: 50px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    section {
+        max-width: 1024px;
+    }
+}
+
+
+
+@media (min-width: 1280px) {
+    section {
+        max-width: 1280px;
+    }
+}
+
+
+@media (min-width: 1536px) {
+    section {
+        max-width: 1536px;
+    }
+}
